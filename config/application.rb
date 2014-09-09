@@ -10,8 +10,8 @@ module NgShapingUpApi
   class Application < Rails::Application
     config.middleware.use Rack::Cors do
       allow do
-        origins 'learn.localhost'
-        resource '/products', headers: :any, methods: :get
+        origins '*'
+        resource '/products', headers: :any, methods: :any
       end
     end
   end
